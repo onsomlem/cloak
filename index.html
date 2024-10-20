@@ -1,17 +1,39 @@
-<html><head><base target="_blank"></head><body><h1>Click here</h1>
-<button>Unblocker</button>
-<script>
-    var urlObj = new window.URL(window.location.href);
-var url = "https://definitelyscience.com/apps/
+<!DOCTYPE html>
+<html>
+<head>
+    <base target="_blank">
+    <style>
+        * {
+            color: white; 
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        button {
+            width: 220px; 
+            height: 40px;
+            border-radius: 12px;
+            background-color: #1F51FF;
+            font-family: Arial, Helvetica, sans-serif;
+            border: none;
+            transition: background-color 500ms;
+        }
+        button:hover {
+            background-color: #1F51FF;
+        }
+    </style>
+</head>
+<body>
+    <h1>Click here</h1>
+    <button>Unblocker</button>
+    <script>
+        var url = "https://definitelyscience.com/apps/";
 
-    if (url) {
         var win;
 
         document.querySelector('button').onclick = function() {
             if (win) {
                 win.focus();
-            } 
-            else {
+            } else {
                 win = window.open();
                 win.document.body.style.margin = '0';
                 win.document.body.style.height = '100vh';
@@ -23,27 +45,9 @@ var url = "https://definitelyscience.com/apps/
                 iframe.src = url;
                 win.document.body.appendChild(iframe);
             }
-            document.querySelector('button').style.background='#ff5148';
-            document.querySelector('button').innerHTML="Game Loaded!";
+            document.querySelector('button').style.background = '#ff5148';
+            document.querySelector('button').innerHTML = "Game Loaded!";
         };
-    }
-</script>
-<style>
-* {
-    color: white; 
-    font-family: arial;
-    text-align: center;
-}
-button {
-    width: 220px; 
-    height: 40px;
-    border-radius: 12px;
-    background-color: #1F51FF;
-    font-family: Arial, Helvetica, sans-serif;
-    border: none;
-    transition: background-color 500ms;
-}
-button:hover {
-    background-color: #1F51FF;
-}
-</style></body></html>
+    </script>
+</body>
+</html>
